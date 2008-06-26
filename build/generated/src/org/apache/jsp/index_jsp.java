@@ -3,6 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.util.Date;
 
 public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -48,10 +49,20 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>JSP Page</title>\n");
+      out.write("        <title> Simple date pratice </title>\n");
       out.write("    </head>\n");
+      out.write("    ");
+
+        
+        Date today = new Date(); 
+
+    
+      out.write("\n");
       out.write("    <body>\n");
       out.write("        <h1>Hello World!</h1>\n");
+      out.write("        <p> Today is: ");
+      out.print( today );
+      out.write(" </p>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {
